@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://www.ibm.com/dba/projects/ADP1937/CD_BillOfLading.json",
+  "title": "ADP1937 Document Type Definitions",
+  "lastUpdatDate": "",
+  "lastUpdate": "",
+  "comment": "This is a Doc Type Definition showing some different property types",
+  "baForDeployment": false,
+  "definitions": {
+    "BillOfLading": {
+      "$id": "#BillOfLading",
+      "title": "Bill of Lading",
+      "allOf": [
+        {
+          "$ref": "http://www.ibm.com/dba/schemas/#systemDocument"
+        },
+        {
+          "type": "object",
+          "description": "This is an example of a Bill of Lading document type. ",
+          "baclass": {
+            "caDocTypeId": "63842cbd-c858-4a5d-955c-7825edb7da25",
+            "defaultRetentionPeriod": "None",
+            "retentionPeriodUnits": ""
+          },
+          "properties": {
+            "Consignee": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "Consignee",
+                  "caKeyClassId": "4f5baab5-22a2-4129-865d-33c8ca7e9bf8",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "CODAmount": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "CODAmount",
+                  "caKeyClassId": "9334b367-57f7-43ec-bd39-ab397bf52434",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "TrackingNumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "TrackingNumber",
+                  "caKeyClassId": "2179c110-a440-43f3-b74b-f6577a132427",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "ConsigneeSignature": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "ConsigneeSignature",
+                  "caKeyClassId": "08710903-8e5a-4eb5-ad13-dd34dbc6ca46",
+                  "caValueType": "signature"
+                }
+              ]
+            },
+            "ShipperSignature": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "ShipperSignature",
+                  "caKeyClassId": "2dd27512-6b7f-4e67-9b10-45c3ea1384f0",
+                  "caValueType": "signature"
+                }
+              ]
+            },
+            "ShipmentTable": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "ShipmentTable",
+                  "caKeyClassId": "e446da80-782d-449a-a3ce-ed439319cca9",
+                  "caValueType": "table",
+                  "caComplexKeyMapping": {
+                    "Main": {
+                      "caKeyClassName": "Main",
+                      "caKeyClassId": "61f382e6-4152-4cc4-aa48-27c774e9056f",
+                      "caComplexKeyMapping": {
+                        "ClassOrRate": {
+                          "caKeyClassName": "ClassOrRate",
+                          "caKeyClassId": "5df37581-f056-4df3-b0bb-a21654a158bb"
+                        },
+                        "ItemCharges": {
+                          "caKeyClassName": "ItemCharges",
+                          "caKeyClassId": "1f60f7cc-b8b1-4cbc-865f-e39aeb1c4e4b"
+                        },
+                        "ItemDescription": {
+                          "caKeyClassName": "ItemDescription",
+                          "caKeyClassId": "3b9aefd1-a264-40bc-8e87-328e56598709"
+                        },
+                        "ItemMeasurement": {
+                          "caKeyClassName": "ItemMeasurement",
+                          "caKeyClassId": "e0be8b2a-788e-4c83-ad31-6afe6b292798"
+                        },
+                        "ItemWeight": {
+                          "caKeyClassName": "ItemWeight",
+                          "caKeyClassId": "fb6a2ed9-4ec3-41a3-871e-4563d60e4787"
+                        },
+                        "MarksAndNumbers": {
+                          "caKeyClassName": "MarksAndNumbers",
+                          "caKeyClassId": "0111dc54-fb89-4851-8a2a-e1ff59249868"
+                        },
+                        "ShippingUnits": {
+                          "caKeyClassName": "ShippingUnits",
+                          "caKeyClassId": "3891fd1e-e6ca-43b5-a6de-83aaba648d6f"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "BillDate": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "BillDate",
+                  "caKeyClassId": "5f1a4ba7-d609-48d5-b8d2-5debfaa95f91",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "TotalCharges": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "TotalCharges",
+                  "caKeyClassId": "6a3856e4-0dfa-4433-897f-08853fc858f3",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PlaceOfReceipt": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PlaceOfReceipt",
+                  "caKeyClassId": "7d8b9536-cea8-4258-a656-d04adaece874",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PlaceOfDelivery": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PlaceOfDelivery",
+                  "caKeyClassId": "f13ec3de-5b66-4693-bf27-be6841d8141f",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PortOfDischarge": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PortOfDischarge",
+                  "caKeyClassId": "561d95c6-0e21-4cff-a300-7bb9505b4f23",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PortOfLoading": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PortOfLoading",
+                  "caKeyClassId": "27df675f-d66b-497f-a58e-31cf19b7307f",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "NotifyParty": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "NotifyParty",
+                  "caKeyClassId": "7f92cb59-b31a-4eff-a527-73bbd837d2d6",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "Carrier": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "Carrier",
+                  "caKeyClassId": "ea74252a-e319-4dbb-817b-bdfff8e6bfe9",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "BillOfLadingNumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "BillOfLadingNumber",
+                  "caKeyClassId": "80443f73-cb29-47df-b1cd-e60609f89798",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "Shipper": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "Shipper",
+                  "caKeyClassId": "1fd79c5f-f898-4da2-8f2c-5af1f1bdec4f",
+                  "caValueType": "text"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://www.ibm.com/dba/projects/ADP1937/CD_UtilityBill.json",
+  "title": "ADP1937 Document Type Definitions",
+  "lastUpdatDate": "",
+  "lastUpdate": "",
+  "comment": "This is a Doc Type Definition showing some different property types",
+  "baForDeployment": false,
+  "definitions": {
+    "UtilityBill": {
+      "$id": "#UtilityBill",
+      "title": "Utility Bill",
+      "allOf": [
+        {
+          "$ref": "http://www.ibm.com/dba/schemas/#systemDocument"
+        },
+        {
+          "type": "object",
+          "description": "This is an example of a document type for Utility bills.",
+          "baclass": {
+            "caDocTypeId": "a2827178-33da-403b-aaa8-b0bb3b820959",
+            "defaultRetentionPeriod": "None",
+            "retentionPeriodUnits": ""
+          },
+          "properties": {
+            "CustomerNumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "CustomerNumber",
+                  "caKeyClassId": "d49f6fdf-dc2d-4465-b4fc-cabafa1d8273",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "Meternumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "Meternumber",
+                  "caKeyClassId": "677d80f5-ea46-42c4-be60-0ac2bc2be4e6",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "TotalAmountDue": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "TotalAmountDue",
+                  "caKeyClassId": "d95059f6-2ff6-4223-b387-c79f19145ca3",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "StatementDate": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "StatementDate",
+                  "caKeyClassId": "805032b6-bee4-4cc6-9ac9-bae6fa2e9df8",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PreviousBalance": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PreviousBalance",
+                  "caKeyClassId": "e428faf9-07bc-4b85-a432-ce905cf50ecd",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "UnpaidBalance": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "UnpaidBalance",
+                  "caKeyClassId": "ab76ca16-0adb-44ca-9bf7-80ad5618fc85",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "PaymentReceived": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "PaymentReceived",
+                  "caKeyClassId": "bcee45e2-4a87-46f6-b69f-b5e1b11f3853",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "DueDate": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "DueDate",
+                  "caKeyClassId": "f442c86c-2421-4361-95e7-8e4eaced20dd",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "StatementNumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "StatementNumber",
+                  "caKeyClassId": "ae3142f0-f6be-4d34-952e-ab5db80362c2",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "ServiceAddress": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "ServiceAddress",
+                  "caKeyClassId": "803fb1f0-968a-45c6-8329-ab15f7a48d5b",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "CustomerName": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "CustomerName",
+                  "caKeyClassId": "90df5c15-2a57-400b-9811-3c6a26bec46b",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "AccountNumber": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "AccountNumber",
+                  "caKeyClassId": "7209c9ba-9ed0-4c89-aa25-60dea4fc00f1",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "UtilityCompanyAddress": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "UtilityCompanyAddress",
+                  "caKeyClassId": "7efbeb56-6f6b-4806-9ed4-abc5c9961616",
+                  "caValueType": "text"
+                }
+              ]
+            },
+            "UtilityCompanyName": {
+              "allOf": [
+                {
+                  "$ref": "unmapped"
+                },
+                {
+                  "caKeyClassName": "UtilityCompanyName",
+                  "caKeyClassId": "803f7219-7527-4660-a659-170935e67080",
+                  "caValueType": "text"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

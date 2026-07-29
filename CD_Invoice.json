@@ -1,0 +1,371 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "http://www.ibm.com/dba/projects/ADP1937/CD_Invoice.json",
+    "title": "ADP1937 Document Type Definitions",
+    "lastUpdatDate": "",
+    "lastUpdate": "",
+    "comment": "This is a Doc Type Definition showing some different property types",
+    "baForDeployment": true,
+    "definitions": {
+        "Invoice": {
+            "$id": "#Invoice",
+            "title": "Invoice",
+            "allOf": [
+                {
+                    "$ref": "http://www.ibm.com/dba/schemas/#systemDocument"
+                },
+                {
+                    "type": "object",
+                    "description": "This is an example of a document type for Billing invoices",
+                    "baclass": {
+                        "caDocTypeId": "b65d6596-71e0-4def-92e4-fc5e04ff4e66",
+                        "defaultRetentionPeriod": "None",
+                        "retentionPeriodUnits": ""
+                    },
+                    "properties": {
+                        "Billtoname": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_9d0b28a7-2457-45ca-b212-ff70c8b04421_Billtoname.json#Billtoname"
+                                },
+                                {
+                                    "caKeyClassName": "Billtoname",
+                                    "caKeyClassId": "ca220e4e-cdf4-4657-9827-825906c992c6",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PaymentTerms": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_c17bbfba-ffdc-4294-a068-b2dc32fd691e_Paymentterms.json#Paymentterms"
+                                },
+                                {
+                                    "caKeyClassName": "PaymentTerms",
+                                    "caKeyClassId": "d9ca477a-2701-404f-97ef-7ee4e53d7e6e",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "InvoiceDate": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_65a34dbd-24e7-4fee-9f3d-52ac887684a3_Invoicedate.json#Invoicedate"
+                                },
+                                {
+                                    "caKeyClassName": "InvoiceDate",
+                                    "caKeyClassId": "fbef1729-35d0-444b-9c2e-bd0a8db14722",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string"
+                                    ]
+                                }
+                            ]
+                        },
+                        "InvoiceTotal": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_0780b08f-dcbf-45e8-b261-e3ec05c978b3_Invoicetotal.json#Invoicetotal"
+                                },
+                                {
+                                    "caKeyClassName": "InvoiceTotal",
+                                    "caKeyClassId": "241acf1c-48a9-4e01-bd1c-a2d990569447",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "number"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PaymentDueDate": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_a39c17ed-d54f-4084-b0fd-a995bb4861c9_Paymentduedate.json#Paymentduedate"
+                                },
+                                {
+                                    "caKeyClassName": "PaymentDueDate",
+                                    "caKeyClassId": "331aee00-834d-4d8e-a322-07dbcd892bb7",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Subtotal": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_2e2ad548-9b76-49f9-8daa-d09d7c980b00_Subtotal.json#Subtotal"
+                                },
+                                {
+                                    "caKeyClassName": "Subtotal",
+                                    "caKeyClassId": "94701716-eecd-4001-938a-22ffaa85be9f",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "ShippingAmount": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_b4be0e26-f04f-40a4-a43d-625a5ec8ad08_Shippingamount.json#Shippingamount"
+                                },
+                                {
+                                    "caKeyClassName": "ShippingAmount",
+                                    "caKeyClassId": "c264fe91-cb25-4182-b96b-f4c623d554bf",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "InvoiceItemTable": {
+                            "allOf": [
+                                {
+                                    "$ref": "unmapped"
+                                },
+                                {
+                                    "caKeyClassName": "InvoiceItemTable",
+                                    "caKeyClassId": "bb356f94-0846-45f4-ae36-fe6f32756b10",
+                                    "caValueType": "table",
+                                    "caComplexKeyMapping": {
+                                        "Main": {
+                                            "caKeyClassName": "Main",
+                                            "caKeyClassId": "7471e714-b73c-4ab0-bcd5-f0e2bc65a655",
+                                            "caComplexKeyMapping": {
+                                                "ItemAmount": {
+                                                    "caKeyClassName": "ItemAmount",
+                                                    "caKeyClassId": "b1e8547d-d6fc-4f77-b6eb-cbee92fa20c2"
+                                                },
+                                                "ItemDescription": {
+                                                    "caKeyClassName": "ItemDescription",
+                                                    "caKeyClassId": "20100061-048e-4bf9-8618-e16f7d736bc2"
+                                                },
+                                                "ItemId": {
+                                                    "caKeyClassName": "ItemId",
+                                                    "caKeyClassId": "330cba52-17df-496a-84bd-0189adfaf2a2"
+                                                },
+                                                "ItemPrice": {
+                                                    "caKeyClassName": "ItemPrice",
+                                                    "caKeyClassId": "45cfc27e-6f6f-444e-bf8a-e1c75ff54b83"
+                                                },
+                                                "ItemQuantity": {
+                                                    "caKeyClassName": "ItemQuantity",
+                                                    "caKeyClassId": "4360bcad-4b07-4c2e-998d-311ddb95bb66"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "ApproverSignature": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_021ef1a9-0ce7-423c-8427-51f420e4c549_ApproverSignature.json#ApproverSignature"
+                                },
+                                {
+                                    "caKeyClassName": "ApproverSignature",
+                                    "caKeyClassId": "b73f0391-35fa-47cc-aa68-c4b1ff6d1c38",
+                                    "caValueType": "signature",
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Accountname": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_d3458a26-1753-4894-907d-4c57f6587d38_Accountname.json#Accountname"
+                                },
+                                {
+                                    "caKeyClassName": "Accountname",
+                                    "caKeyClassId": "59f200f0-c027-4c35-86c0-87b17ce284b2",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Accountnumber": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_373eea36-915c-4df1-9620-517b9f48c971_Accountnumber.json#Accountnumber"
+                                },
+                                {
+                                    "caKeyClassName": "Accountnumber",
+                                    "caKeyClassId": "62251fce-2ed3-4d01-8669-bea7e1ea7556",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Bankname": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_93eaae57-4c17-43d2-8a0e-f9f1181e052c_Bankname.json#Bankname"
+                                },
+                                {
+                                    "caKeyClassName": "Bankname",
+                                    "caKeyClassId": "1bd6d498-24b7-4d20-b7fb-27a4bafdfb48",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Billtoaddress": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_a16ba70d-33bf-48d0-9840-f6844fc11862_Billtoaddress.json#Billtoaddress"
+                                },
+                                {
+                                    "caKeyClassName": "Billtoaddress",
+                                    "caKeyClassId": "ebc060fb-43b6-44eb-bbf4-93c07fe35d70",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Shiptoaddress": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_ea52cb75-752d-40f8-84b7-db65109211dd_Shiptoaddress.json#Shiptoaddress"
+                                },
+                                {
+                                    "caKeyClassName": "Shiptoaddress",
+                                    "caKeyClassId": "900b8061-1b2f-4ce2-a0ef-b9636b078269",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "Shiptoname": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_75702866-0aba-408b-9fbe-6b65ab60cd4b_Shiptoname.json#Shiptoname"
+                                },
+                                {
+                                    "caKeyClassName": "Shiptoname",
+                                    "caKeyClassId": "dab25617-113e-4245-a09c-d4f88f3f8594",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "TaxAmount": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_4f73e15a-f7af-4eaa-b3d3-acde4b55b454_Taxamount.json#Taxamount"
+                                },
+                                {
+                                    "caKeyClassName": "TaxAmount",
+                                    "caKeyClassId": "8ee8ab36-2a19-4e50-a465-fbc9959f7aba",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "InvoiceNumber": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_70896dca-79b9-4c01-b40f-ef96356b3aeb_Invoicenumber.json#Invoicenumber"
+                                },
+                                {
+                                    "caKeyClassName": "InvoiceNumber",
+                                    "caKeyClassId": "468fdb54-445c-48ad-aede-6cf6584d7fbb",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "integer"
+                                    ]
+                                }
+                            ]
+                        },
+                        "VendorName": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_bf3aa41e-958e-4d8e-8338-b5c07535ffdd_Vendorname.json#Vendorname"
+                                },
+                                {
+                                    "caKeyClassName": "VendorName",
+                                    "caKeyClassId": "741817b9-887d-4e1e-9807-77144df3b87c",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string"
+                                    ]
+                                }
+                            ]
+                        },
+                        "VendorAddress": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_164e8db6-6743-443e-aa7b-5f1bde864c1a_Vendoraddress.json#Vendoraddress"
+                                },
+                                {
+                                    "caKeyClassName": "VendorAddress",
+                                    "caKeyClassId": "35fda00d-720d-4156-912e-4c85fdcf9543",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PurchaseOrderNumber": {
+                            "allOf": [
+                                {
+                                    "$ref": "proj://CDD/DD_a50facb8-66e2-4938-93fc-896a1e645526_Purchaseordernumber.json#Purchaseordernumber"
+                                },
+                                {
+                                    "caKeyClassName": "PurchaseOrderNumber",
+                                    "caKeyClassId": "dd309398-57b3-487b-9a93-3c7a32c8350b",
+                                    "caValueType": "text",
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
